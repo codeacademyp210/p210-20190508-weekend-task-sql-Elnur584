@@ -1,0 +1,45 @@
+--create database Homework
+--use HomeWork
+--create table Users(
+-- Id int Primary Key identity(1,1),
+-- Name nvarchar(15) not null,
+-- Surname nvarchar(20) not null,
+-- Username nvarchar(15) not null,
+-- Email nvarchar(20) unique not null,
+-- Password nvarchar(20) not null
+-- );
+ --create table Products(
+ --Id int Primary Key identity(1,1),
+ --UserId int foreign key references Users(Id),
+ --Name nvarchar(15) not null,
+ --Price float not null, 
+ --Color nvarchar(15) not null,
+ --Barcode nvarchar(20)
+ --  );
+--create table Categories(
+--   Id int Primary key identity(1,1),
+--   Name nvarchar(15) not null 
+--);
+--create table Brands(
+--   Id int Primary key identity(1,1),
+--   Name nvarchar(15) not null ,
+--   CategoryId int foreign key references Categories(Id)
+--);
+--create table Stock(
+--   Id int primary key identity(1,1),
+--   ProductId int foreign key references Products(Id),
+--   Count_ int
+--);
+--create table Orders(
+--   Id int primary key identity(1,1),
+--   UserId int foreign key references Users(Id),
+--   ProductId int foreign key references Products(Id),
+--   ProductCount_ int,
+--   OrderDate nvarchar(15)
+--);
+
+--alter table Categories add foreign key (CategoryId) references Products(Id)
+--alter table Products add foreign key (BrandId) references Brands(Id)
+--insert into Users (Name,Surname,Username,Email,Password) values('Samxal','Imoanov','I_ov','Sham@mail.ru','125645')
+--insert into Products (Name,Price,Color,Barcode) values('Iphone',1100,'SpaceGray','124552645')
+--select u1.Name from Users u1 inner join Products p1 on Name U1.Name = p1.Name
